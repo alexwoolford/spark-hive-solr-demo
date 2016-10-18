@@ -1,0 +1,1 @@
+# spark-hive-solr-demo
