@@ -64,37 +64,40 @@ Ran this command:
   	
 
 /usr/hdp/current/hive-client/conf/hive-site.xml
-<property>
+
+		<property>
 		  <name>javax.jdo.option.ConnectionPassword</name>
 		  <value>hadoop</value>
 		</property>
 		
-		
+Added table to hive:		
 
-su hdfs
+	su hdfs
 
-vi firstname_lastname.txt
+	vi firstname_lastname.txt
 
 add some records:
 
-$ cat firstname_lastname.txt 
-Barack,Obama
-Donald,Trump
+	$ cat firstname_lastname.txt 
+	Barack,Obama
+	Donald,Trump
 
-hive
-CREATE TABLE sanjay (
-   firstname string,
-   lastname string
-)
-ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
-LOCATION '/apps/hive/warehouse/sanjay';
+	hive
+	CREATE TABLE sanjay (
+   		firstname string,
+   		lastname string
+	)
+	ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+	LOCATION '/apps/hive/warehouse/sanjay';
 
 from $
-hdfs dfs -copyFromLocal firstname_lastname.txt /apps/hive/warehouse/sanjay
+	
+	hdfs dfs -copyFromLocal firstname_lastname.txt /apps/hive/warehouse/sanjay
 
-hive> select * from sanjay;
-Barack	Obama
-Donald	Trump
+	hive> select * from sanjay;
+	
+	Barack	Obama
+	Donald	Trump
 
 
   
