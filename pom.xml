@@ -69,7 +69,6 @@
 			<artifactId>transaction-api</artifactId>
 			<version>1.1</version>
 		</dependency>
-
 		<!--added per issue described in this post: http://stackoverflow.com/questions/28326311/spark-hive-context-hql-issues-in-java-when-running-spark-job-in-yarn -->
 
 	</dependencies>
@@ -85,7 +84,7 @@
 					<log4jConfiguration>${basedir}/src/main/resources/log4j.properties</log4jConfiguration>
 					<verbose>true</verbose>
 					<fork>false</fork>
-					
+					<metadataIncludes>**/*.jdo</metadataIncludes>
 				</configuration>
 				<executions>
 				

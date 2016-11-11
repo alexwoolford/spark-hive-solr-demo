@@ -1,1 +1,7 @@
+/bin/
+/target/
+/datanucleus.log
+/dependency-reduced-pom.xml
 .settings
+.project
+.classpath
