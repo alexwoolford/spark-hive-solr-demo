@@ -20,7 +20,7 @@ public class Main {
 
         HiveContext hiveContext = new HiveContext(sc);
 
-        Row[] results = hiveContext.sql("SELECT * FROM airline.ontime LIMIT 10").collect();
+        Row[] results = hiveContext.sql("SELECT * FROM default.sanjay LIMIT 10").collect();
 
         for (Row row : results){
             logger.log(Level.INFO, row.toString());
